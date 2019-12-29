@@ -1,0 +1,44 @@
+if &compatible
+  set nocompatible
+end
+
+call plug#begin('~/.vim/bundle')
+
+" Define bundles via Github repos
+Plug 'christoomey/vim-run-interactive'
+
+" If fzf has already been installed via Homebrew, use the existing fzf
+" Otherwise, install fzf. The `--all` flag makes fzf accessible outside of vim
+if isdirectory("/usr/local/opt/fzf")
+  Plug '/usr/local/opt/fzf'
+else
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+endif
+
+" General Vim Helpers
+Plug 'junegunn/fzf.vim' " 'nuf said
+Plug 'pbrisbin/vim-mkdir' " Make a file that doesn't exist
+Plug 'tpope/vim-eunuch' " File Helpers
+Plug 'janko-m/vim-test' " Self-explanatory
+Plug 'tpope/vim-fugitive' " Git Helpers
+Plug 'tpope/vim-surround' " Help with quotes, parens, etc.
+Plug 'vim-scripts/tComment' " Comment toggler, etc.
+
+" Ruby/Rails Helpers
+Plug 'tpope/vim-bundler' 
+Plug 'tpope/vim-endwise' 
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'vim-ruby/vim-ruby'
+
+" Language plugins
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'elmcast/elm-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'derekwyatt/vim-scala'
+
+" Styling/Workspace Plugins
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+
+call plug#end()

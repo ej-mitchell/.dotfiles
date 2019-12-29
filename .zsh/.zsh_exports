@@ -1,0 +1,7 @@
+# Oh My ZSH
+export ZSH=/Users/eliza_mitchell/.oh-my-zsh
+
+# Postgres
+# Note: This is left over from when dev environment depended on PG; might need to be updated in the future
+
+export PGHOST=localhost

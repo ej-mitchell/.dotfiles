@@ -1,0 +1,19 @@
+[user]
+name = Eliza Mitchell
+email = eliza.j.mitchell@gmail.com
+
+[push]
+    default = current
+
+[pull]
+    default = current
+
+[alias]
+    wdiff = diff -w --color-words
+    cb = checkout -b
+    c = checkout
+    cm = commit
+    cmm = commit -m
+    a = add .
+    s = status
+    gdiff = diff | grep
