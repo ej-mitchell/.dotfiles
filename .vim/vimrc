@@ -3,6 +3,7 @@ set encoding=utf-8
 " Leader
 let mapleader = " "
 
+set clipboard=unnamed " Clipboards are now the same
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
@@ -27,7 +28,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-  endif
+endif
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
