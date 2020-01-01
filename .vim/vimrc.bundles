@@ -41,4 +41,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 
+" CoC Installations
+Plug 'ckipp01/coc-metals'
+
 call plug#end()

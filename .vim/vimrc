@@ -158,12 +158,6 @@ autocmd BufWrite <buffer> :call CocAction('format')
  highlight Pmenu ctermbg=gray
 
 " " Status Bar
-"
-" " Color scheme
- let g:lightline = {
-       \ 'colorscheme': 'solarized',
-             \ }
-
 " Don't show modes since the status bar shows it now
 set noshowmode
 
@@ -176,12 +170,18 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Mapping to trigger opening of Nav bar.
 map <Leader><Leader>n :NERDTreeToggle<CR>
 
-" CoC Settings - thanks @gnfisher!
+" CoC Settings 
 
 " Jump to definitions and other navigational stuff
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Rename current word
+nmap <leader>rn <Plug>(coc-rename)
 
 " Use `:Format` to format current buffer - should also do on save
 command! -nargs=0 Format :call CocAction('format')

@@ -1,11 +1,19 @@
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/eliza_mitchell/.oh-my-zsh"
+source /usr/local/share/antigen/antigen.zsh
 
-autoload -U promptinit; promptinit
-prompt pure
+ZSH-THEME=""
 
-# Disable ZSH themes for Pure
-ZSH_THEME=""
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle heroku
+antigen bundle zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle sindresorhus/pure
+
+antigen apply
+
+CASE_SENSITIVE="true"
 
 # exports
 source $HOME/.zsh_exports
@@ -16,22 +24,9 @@ source $HOME/.zsh_aliases
 # # functions
 source $HOME/.zsh_functions
 
-# Enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-plugins=(
-  git
-  zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-. /usr/local/opt/asdf/asdf.sh
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+

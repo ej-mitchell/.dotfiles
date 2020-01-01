@@ -1,0 +1,27 @@
+{
+    "languageserver": {
+        "metals": {
+           "command": "metals-vim",
+           "rootPatterns": ["build.sbt"],
+           "filetypes": ["scala", "sbt"]
+         },
+        "elmLS": {
+            "command": "elm-language-server",
+            "filetypes": ["elm"],
+            "rootPatterns": ["elm.json"],
+            "initializationOptions": {
+               "elmAnalyseTrigger": "change"
+             }
+        }
+     },
+
+     "coc.preferences.formatOnSaveFiletypes": [
+         "css",
+         "markdown",
+         "Markdown",
+         "javascript",
+         "ruby",
+         "scala",
+         "json"
+     ]
+}
