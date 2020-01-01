@@ -154,8 +154,12 @@ autocmd BufWrite <buffer> :call CocAction('format')
 
 " Styling choices
 
+" Colorscheme
+" Not actually my colorscheme. Just let me disable the default colorscheme.
+colorscheme delek
+
 " Fix Popover color
- highlight Pmenu ctermbg=gray
+highlight Pmenu ctermbg=gray
 
 " " Status Bar
 " Don't show modes since the status bar shows it now

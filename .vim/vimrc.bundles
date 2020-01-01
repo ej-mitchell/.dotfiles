@@ -32,7 +32,6 @@ Plug 'tpope/vim-rake'
 Plug 'vim-ruby/vim-ruby'
 
 " Language plugins
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'elmcast/elm-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'derekwyatt/vim-scala'
@@ -42,6 +41,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 
 " CoC Installations
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ckipp01/coc-metals'
+Plug 'neoclide/coc-highlight'
 
 call plug#end()
