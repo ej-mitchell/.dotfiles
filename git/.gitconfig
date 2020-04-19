@@ -6,7 +6,11 @@ email = eliza.j.mitchell@gmail.com
     default = current
 
 [pull]
+    rebase = true
     default = current
+
+[branch]
+  autosetuprebase = always
 
 [alias]
     wdiff = diff -w --color-words
@@ -17,3 +21,8 @@ email = eliza.j.mitchell@gmail.com
     a = add .
     s = status
     gdiff = diff | grep
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
