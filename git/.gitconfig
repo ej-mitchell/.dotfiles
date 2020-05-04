@@ -21,8 +21,12 @@ email = eliza.j.mitchell@gmail.com
     a = add .
     s = status
     gdiff = diff | grep
+
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
   clean = git-lfs clean -- %f
+
+[merge]
+    ff = only

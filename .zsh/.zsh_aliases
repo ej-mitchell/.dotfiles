@@ -11,3 +11,8 @@ alias b="bundle"
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
 
+# ADS
+
+alias adss="cd ~/Documents/dev/ads-quoting/ads-quoting-server"
+alias adsu="cd ~/Documents/dev/ads-quoting/ads-quoting-ui"
+

@@ -1,7 +1,5 @@
 source /usr/local/share/antigen/antigen.zsh
 
-ZSH-THEME=""
-
 antigen use oh-my-zsh
 
 antigen bundle git

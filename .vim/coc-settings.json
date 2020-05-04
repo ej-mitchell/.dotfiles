@@ -1,17 +1,15 @@
 {
     "languageserver": {
-        "metals": {
-           "command": "metals-vim",
-           "rootPatterns": ["build.sbt"],
-           "filetypes": ["scala", "sbt"]
-         },
-        "elmLS": {
-            "command": "elm-language-server",
-            "filetypes": ["elm"],
-            "rootPatterns": ["elm.json"],
-            "initializationOptions": {
-               "elmAnalyseTrigger": "change"
-             }
+       "elmLS": {
+           "command": "elm-language-server",
+           "filetypes": ["elm"],
+           "rootPatterns": ["elm.json"],
+           "initializationOptions": {
+              "elmPath": "elm", 
+              "elmFormatPath": "elm-format", 
+              "elmTestPath": "elm-test", 
+              "elmAnalyseTrigger": "change"
+            }
         }
      },
 
@@ -22,6 +20,9 @@
          "javascript",
          "ruby",
          "scala",
-         "json"
-     ]
+         "json",
+         "elm"
+     ],
+
+     "workspace.ignoredFiletypes": ["gitcommit"]
 }
