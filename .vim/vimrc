@@ -16,6 +16,7 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set modelines=0   " Disable modelines as a security precaution
 set nomodeline
+" set shortmess+=c
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -140,8 +141,10 @@ nnoremap <C-l> <C-w>l
 " Map Ctrl + p to open fuzzy find (FZF)
 nnoremap <c-p> :Files<cr>
 
-" Always use vertical diffs
-set diffopt+=vertical
+" Manipulate file navigation
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>se :sp <C-R>=expand("%:p:h") . "/" <CR>
 
 " Language-specific choices
 
@@ -199,3 +202,12 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Scrolling in popups
+" nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
+" nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
+
+" Add status line support, for integration with other plugin, checkout `:hcoc-status`
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+let g:node_client_debug = 1
