@@ -1,0 +1,7 @@
+.vim/bundle/*
+.vim/.netrwhist
+.vim/colors/
+.vim/view/
+.DS_Store
+.config/configstore
+.config/coc

@@ -19,7 +19,7 @@ source $HOME/.zsh_exports
 # aliases
 source $HOME/.zsh_aliases
 
-# # functions
+# functions
 source $HOME/.zsh_functions
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -1,6 +1,6 @@
 [user]
-name = EJ Mitchell
-email = emitchell@thoughtbot.com
+	name = EJ Mitchell
+	email = ejm@cupofsquid.com
 
 [push]
     default = current
