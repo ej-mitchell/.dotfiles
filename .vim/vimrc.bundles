@@ -38,7 +38,7 @@ Plug 'derekwyatt/vim-scala'
 
 " Styling/Workspace Plugins
 Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'mhinz/vim-startify'
 
 " CoC Installations
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
