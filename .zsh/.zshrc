@@ -11,6 +11,14 @@ antigen bundle sindresorhus/pure
 
 antigen apply
 
+# Pure Prompt Style Adjustments
+PURE_PROMPT_SYMBOL=➺
+PURE_GIT_DOWN_ARROW=⥝
+PURE_GIT_UP_ARROW=⥘
+zstyle :prompt:pure:git:stash show yes
+zstyle :prompt:pure:prompt:success color 10
+zstyle :prompt:git:stash color yellow
+
 CASE_SENSITIVE="true"
 
 # exports

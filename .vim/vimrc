@@ -155,16 +155,15 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 autocmd FileType json syntax match Comment +\/\/.\+$+
 autocmd BufWrite <buffer> :call CocAction('format')
 
-" Styling choices
+" vim-polyglot disable settings
+let g:polyglot_disabled = ['scala', 'elm']
 
-" Colorscheme
-" Not actually my colorscheme. Just let me disable the default colorscheme.
-colorscheme delek
+" Styling choices
 
 " Fix Popover color
 highlight Pmenu ctermbg=black ctermfg=blue
 
-" " Status Bar
+" Status Bar
 " Don't show modes since the status bar shows it now
 set noshowmode
 
@@ -173,7 +172,7 @@ set noshowmode
 " Open when Vim is opened - with just 'vim' and not 'vim .'
 autocmd StdinReadPre * let s:std_in=1
 
-" CoC Settings 
+" CoC Settings
 
 " Jump to definitions and other navigational stuff
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
