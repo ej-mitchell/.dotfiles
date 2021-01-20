@@ -23,6 +23,9 @@ Plug 'janko-m/vim-test' " Self-explanatory
 Plug 'tpope/vim-fugitive' " Git Helpers
 Plug 'tpope/vim-surround' " Help with quotes, parens, etc.
 Plug 'vim-scripts/tComment' " Comment toggler, etc.
+Plug 'prettier/vim-prettier',  { 
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'html'] }
 
 " Ruby/Rails Helpers
 Plug 'tpope/vim-bundler' 
@@ -43,5 +46,6 @@ Plug 'mhinz/vim-startify'
 
 " CoC Installations
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
 
 call plug#end()
