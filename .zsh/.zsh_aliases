@@ -13,3 +13,8 @@ alias s="rspec"
 
 # `vim` => `nvim`
 alias vim="nvim"
+
+# Epic Games
+
+alias hpsdk="cd ~/Documents/dev/houseparty-sdk"
+alias hpweb="cd ~/Documents/dev/houseparty-web-client"

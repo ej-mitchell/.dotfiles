@@ -1,0 +1,5 @@
+# Override the yarn link location
+# This was causing problems since the .config file is sym linked.
+
+function ylink() { yarn link $1 --link-folder ~/.yarn-links }
+function yunlink() { yarn unlink $1 --link-folder ~/.yarn-links }
