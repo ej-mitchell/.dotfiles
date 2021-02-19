@@ -32,7 +32,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " vim-polyglot disable settings
-let g:polyglot_disabled = ['scala', 'elm']
+let g:polyglot_disabled = ['scala', 'elm', 'typescript', 'javascript']
 
 if filereadable(expand("~/.vim/vimrc.bundles"))
   source ~/.vim/vimrc.bundles
@@ -151,6 +151,10 @@ map <Leader>se :sp <C-R>=expand("%:p:h") . "/" <CR>
 
 " Language-specific choices
 
+" Rescan the entire buffer for JSX/TSX projects
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
@@ -185,6 +189,9 @@ nmap <silent> gr <Plug>(coc-references)
 " List coc diagnostics
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 
+" Perform a code action
+nmap <leader>do <Plug>(coc-codeaction)
+
 " Rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
@@ -200,6 +207,15 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Conditionally enable coc-prettier and coc-eslint if they're installed
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
 
 " Scrolling in popups
 " nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"

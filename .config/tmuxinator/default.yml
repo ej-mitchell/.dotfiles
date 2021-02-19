@@ -1,0 +1,13 @@
+# /Users/tb_emitchell/.config/tmuxinator/default.yml
+
+
+name: default
+root: ~/
+
+windows:
+    - the-matrix:
+        layout: 7bd2,197x73,0,0{122x73,0,0,0,74x73,123,0[74x39,123,0,4,74x33,123,40,5]}
+        panes:
+            - clear
+            - clear
+            - clear

@@ -14,6 +14,9 @@ alias s="rspec"
 # `vim` => `nvim`
 alias vim="nvim"
 
+# tmuxinator
+alias tx="tmuxinator"
+
 # Epic Games
 
 alias hpsdk="cd ~/Documents/dev/houseparty-sdk"

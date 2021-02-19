@@ -5,3 +5,6 @@ export ZSH=/Users/tb_emitchell/.oh-my-zsh
 # Note: This is left over from when dev environment depended on PG; might need to be updated in the future
 
 export PGHOST=localhost
+
+# Editor
+export EDITOR=nvim
