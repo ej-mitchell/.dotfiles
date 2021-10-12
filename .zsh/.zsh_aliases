@@ -17,7 +17,6 @@ alias vim="nvim"
 # tmuxinator
 alias tx="tmuxinator"
 
-# Epic Games
+#uxn
 
-alias hpsdk="cd ~/Documents/dev/houseparty-sdk"
-alias hpweb="cd ~/Documents/dev/houseparty-web-client"
+alias uxnemu="~/uxn/bin/uxnemu"

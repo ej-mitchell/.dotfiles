@@ -208,6 +208,7 @@ function! s:show_documentation()
   endif
 endfunction
 
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-git', 'coc-css']
 " Conditionally enable coc-prettier and coc-eslint if they're installed
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
   let g:coc_global_extensions += ['coc-prettier']
@@ -216,10 +217,6 @@ endif
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
-
-" Scrolling in popups
-" nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
-" nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
 
 " Add status line support, for integration with other plugin, checkout `:hcoc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
