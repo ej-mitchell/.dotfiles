@@ -17,6 +17,9 @@ alias vim="nvim"
 # tmuxinator
 alias tx="tmuxinator"
 
-#uxn
-
+# uxn
 alias uxnemu="~/uxn/bin/uxnemu"
+
+# customs
+
+alias unfuckme="sudo apt-get auto-remove && sudo apt-get clean && sudo apt-get update && sudo apt-get upgrade"

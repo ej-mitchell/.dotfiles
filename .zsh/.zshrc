@@ -1,4 +1,7 @@
-source /usr/local/share/antigen/antigen.zsh
+source ~/antigen.zsh
+
+autoload -U promptinit; promptinit
+prompt pure
 
 antigen use oh-my-zsh
 
@@ -7,7 +10,6 @@ antigen bundle heroku
 antigen bundle zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle sindresorhus/pure
 
 antigen apply
 
@@ -34,4 +36,6 @@ source $HOME/.zsh_functions
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
+
+eval "$(direnv hook zsh)"
 

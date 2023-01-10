@@ -5,4 +5,5 @@
 --skip-turbolinks
 --skip-coffee
 --skip-bootsnap
+--no-master
 --template=~/rails_template.rb

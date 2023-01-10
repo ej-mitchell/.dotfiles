@@ -5,7 +5,6 @@ add_source "https://rubygems.org/"
 gem 'rails'
 gem 'pg'
 gem 'puma'
-gem 'uglifier'
 
 gem_group :development do
   gem 'listen'
@@ -21,8 +20,7 @@ gem_group :test do
 end
 
 gem_group :development, :test do
-  gem 'launchy', require: false
-  gem 'pry-rails'
+  gem 'pry-rails' 
   gem 'rspec-rails'
   gem 'valid_attribute'
 end

@@ -1,6 +1,7 @@
 [user]
 	name = EJ Mitchell
 	email = ejm@cupofsquid.com
+	signingkey = A9E6DFBC831A2B99DF430617C11BDF29881B2DD6
 
 [push]
     default = current
@@ -30,3 +31,10 @@
 
 [merge]
     ff = only
+[commit]
+	gpgSign = true
+[safe]
+	directory = /home/eejum/dev/fashion-revolution/fashionrevolution_composer/src/web/app/plugins/autonomic-wordpress-events
+	directory = /home/eejum/dev/fashion-revolution/fashionrevolution_composer/src/web/app/themes/fashion-revolution
+[init]
+	defaultBranch = main
