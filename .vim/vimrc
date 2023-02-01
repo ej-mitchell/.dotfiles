@@ -159,9 +159,8 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 " Configuration for vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
-" Comments highlighting, auto-formatting
+" Comments highlighting
 autocmd FileType json syntax match Comment +\/\/.\+$+
-autocmd BufWrite <buffer> :call CocAction('format')
 
 " Styling choices
 
@@ -196,8 +195,8 @@ nmap <leader>do <Plug>(coc-codeaction)
 " Rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
-" Use `:Format` to format current buffer - should also do on save
-command! -nargs=0 Format :call CocAction('format')
+" Add `:Format` command to format current buffer
+command! -nargs=0 Format :call CocActionAsync('format')
 
 " Use K to either doHover or show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
